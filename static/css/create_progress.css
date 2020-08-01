@@ -1,0 +1,7 @@
+.egAlertTop {
+    position: fixed;
+    top: 60px;
+    z-index: 1;
+    left: 50%;
+    transform: translateX(-50%);
+}

@@ -1,0 +1,48 @@
+.brand-card-header {
+    height: 4rem;
+}
+
+.brand-card-header .h3 {
+    margin-bottom: 0;
+    font-weight: bold;
+}
+
+.chart-header {
+    letter-spacing: 0.05em;
+    font-weight: bolder;
+    font-size: 1.5em;
+}
+
+.bg-custom-blue {
+    background-color: #2980B9;
+    color: #fff;
+}
+
+.date-filter-label {
+    color: black;
+    letter-spacing: 0.05em;
+}
+
+.btn-outline-danger {
+    border: unset;
+}
+
+.btn-group > .btn {
+    border-radius: unset;
+}
+
+@media (min-width: 768px) {
+    .pull-left-md {
+        float: left;
+    }
+    .pull-right-md {
+        float: right;
+    }
+}
+
+/* Small devices  (767px and low) */
+@media (max-width: 767px) {
+    .margin-top-sm {
+        margin-top: 0.3rem;
+    }
+}

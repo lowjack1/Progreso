@@ -1,0 +1,112 @@
+{% extends base.html %}
+
+{% block resources_header %}
+<link rel="stylesheet" href="{{ static_url('css/homepage.css') }}">
+{% end %}
+
+{% block main %}
+<div class="row justify-content-center">
+    <div class="col-sm-12 col-md-4">
+        <div class="brand-card" id="dp_single_card">
+            <div class="brand-card-header bg-primary">
+                <span class="h3">Dynamic Programming</span>
+            </div>
+            <div class="brand-card-body">
+                <div>
+                    <div class="text-value overall"></div>
+                    <div class="text-uppercase text-muted small">Overall</div>
+                </div>
+                <div>
+                    <div class="text-value this-month"></div>
+                    <div class="text-uppercase text-muted small">This Month</div>
+                </div>
+                <div>
+                    <div class="text-value today"></div>
+                    <div class="text-uppercase text-muted small">Today</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-sm-12 col-md-4">
+        <div class="brand-card" id="graphs_single_card">
+            <div class="brand-card-header bg-primary">
+                <span class="h3">Graphs</span>
+            </div>
+            <div class="brand-card-body">
+                <div>
+                    <div class="text-value overall"></div>
+                    <div class="text-uppercase text-muted small">Overall</div>
+                </div>
+                <div>
+                    <div class="text-value this-month"></div>
+                    <div class="text-uppercase text-muted small">This Month</div>
+                </div>
+                <div>
+                    <div class="text-value today"></div>
+                    <div class="text-uppercase text-muted small">Today</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-sm-12 col-md-4">
+        <div class="brand-card" id="others_single_card">
+            <div class="brand-card-header bg-primary">
+                <span class="h3">Others</span>
+            </div>
+            <div class="brand-card-body">
+                <div>
+                    <div class="text-value overall"></div>
+                    <div class="text-uppercase text-muted small">Overall</div>
+                </div>
+                <div>
+                    <div class="text-value this-month"></div>
+                    <div class="text-uppercase text-muted small">This Month</div>
+                </div>
+                <div>
+                    <div class="text-value today"></div>
+                    <div class="text-uppercase text-muted small">Today</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-sm-12 col-md-12">
+        <div class="card" id="programming_line_chart" style="opacity: 0;">
+            <div class="card-header bg-custom-blue">
+                <div class="row justify-content-center">
+                    <div class="col-sm-12 col-md-6 text-center pull-left-md">
+                        <span class="chart-header pull-left-md">Programming</span>
+                    </div>
+                    <div class="col-sm-12 col-md-6 text-center">
+                        <div class="btn-group btn-group-toggle pull-right-md bg-white margin-top-sm" data-toggle="buttons">
+                            <label class="btn date-filter-label btn-outline-danger" for="option1" onclick="updateProgrammingLineGraph('day')">
+                                <input id="option1" type="radio" name="options" autocomplete="off"> Day
+                            </label>
+                            <label class="btn date-filter-label btn-outline-danger active" for="option2" onclick="updateProgrammingLineGraph('month')">
+                                <input id="option2" type="radio" name="options" autocomplete="off" checked> Month
+                            </label>
+                            <label class="btn date-filter-label btn-outline-danger" for="option3" onclick="updateProgrammingLineGraph('year')">
+                                <input id="option3" type="radio" name="options" autocomplete="off"> Year
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card-body">
+                <div style="height: 350px;">
+                    <canvas class="chartjs-render-monitor"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% end %}
+
+{% block resources_footer %}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.23.0/moment.min.js"></script>
+<script src="{{ static_url('node_modules/coreui/dist/vendors/chart.js/js/Chart.min.js') }}"></script>
+<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-colorschemes"></script>
+<script src="{{ static_url('js/homepage.js') }}"></script>
+{% end %}

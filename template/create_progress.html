@@ -1,0 +1,131 @@
+{% extends base.html %}
+
+{% block resources_header %}
+<link rel="stylesheet" href="{{ static_url('css/create_progress.css') }}">
+{% end %}
+
+{% block main %}
+<div class="row justify-content-center" style="margin-top: 6em;">
+    <div class="col-md-3 col-sm-12" id="dynamic_programming">
+        <div class="card"> 
+            <div class="card-header text-center bg-primary">
+                <h4 style="margin-top:0.3em"><strong>Dynamic Programming</strong></h4>
+            </div>
+            <div class="card-body">
+                <div class="callout callout-info">
+                    <small class="small text-muted">Total Problems Solved</small>
+                    <input type="number" class="form-control" name="track_dp" value="0" min="0">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-3 col-sm-12" id="graph_theory">
+        <div class="card"> 
+            <div class="card-header text-center bg-primary">
+                <h4 style="margin-top:0.3em"><strong>Graph Theory</strong></h4>
+            </div>
+            <div class="card-body">
+                <div class="callout callout-info">
+                    <small class="small text-muted">Total Problems Solved</small>
+                    <input type="number" class="form-control" name="track_graphs" value="0" min = "0">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-3 col-sm-12" id="others">
+        <div class="card"> 
+            <div class="card-header text-center bg-primary">
+                <h4 style="margin-top:0.3em"><strong>Others</strong></h4>
+            </div>
+            <div class="card-body">
+                <div class="callout callout-info">
+                    <small class="small text-muted">Total Problems Solved</small>
+                    <input type="number" class="form-control" name="track_others" value="0" min = "0">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row justify-content-center" style="margin-top: 4em;">
+    <div class="col-md-3 col-sm-12" id="operating_system">
+        <div class="card"> 
+            <div class="card-header text-center bg-primary">
+                <h4 style="margin-top:0.3em"><strong>Operating System</strong></h4>
+            </div>
+            <div class="card-body text-center">
+                <div class="div_not_done">
+                    <div style="padding:0.7em">
+                        <h5>Is It Done ?</h5>
+                    </div>
+                    <div class="text-center">
+                        <button class="btn btn-success btn-done" onclick="updateTodaysProgress('os')">Yes</button>
+                    </div>
+                </div>
+                <div class="div_done" style="padding:1.9em; display: none;">
+                    <button class="btn btn-success btn-completed">Completed</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-3 col-sm-12" id="system_design">
+        <div class="card"> 
+            <div class="card-header text-center bg-primary">
+                <h4 style="margin-top:0.3em"><strong>System Design</strong></h4>
+            </div>
+            <div class="card-body text-center">
+                <div class="div_not_done">
+                    <div style="padding:0.7em">
+                        <h5>Is It Done ?</h5>
+                    </div>
+                    <div class="text-center">
+                        <button class="btn btn-success btn-done" onclick="updateTodaysProgress('sys_des')">Yes</button>
+                    </div>
+                </div>
+                <div class="div_done" style="padding:1.9em; display: none;">
+                    <button class="btn btn-success btn-completed">Completed</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-3 col-sm-12" id="machine_learning">
+        <div class="card"> 
+            <div class="card-header text-center bg-primary">
+                <h4 style="margin-top:0.3em"><strong>Machine Learning</strong></h4>
+            </div>
+            <div class="card-body text-center">
+                <div class="div_not_done">
+                    <div style="padding:0.7em">
+                        <h5>Is It Done ?</h5>
+                    </div>
+                    <div class="text-center">
+                        <button class="btn btn-success btn-done" onclick="updateTodaysProgress('ml')">Yes</button>
+                    </div>
+                </div>
+                <div class="div_done" style="padding:1.9em; display: none;">
+                    <button class="btn btn-success btn-completed">Completed</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Alert -->
+<div class="egAlertTop justify-content-center" style="display: none;">
+    <div class="alert alert-dismissible fade show" role="alert">
+        <strong></strong>
+        <!-- "data-dismiss" completley removes the element from the DOM. We need to explicitly hide the alert if we want to show it again. -->
+        <button type="button" class="close" aria-label="Close" onclick="$(this).parent().parent().hide();">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+</div>
+{% end %}
+
+{% block resources_footer %}
+<script src="{{ static_url('js/create_progress.js') }}"></script>
+{% end %}
