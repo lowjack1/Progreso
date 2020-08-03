@@ -1,7 +1,7 @@
 Progreso
 ===========
 
-A progress tracking web application, written in python using Tornado and PostgreSQL, developed for competetive programmers and computer science students.
+A progress tracking web application, written in python using Tornado and PostgreSQL, developed for competitive programmers and computer science students.
 
 
 Details
