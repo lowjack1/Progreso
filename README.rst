@@ -33,10 +33,10 @@ Overview
 
 This is how the application will look like
 
-.. image:: static/images/screen_shot_1.png
+.. image:: Screenshots/1.png
    :alt: HomePage
 
-.. image:: static/images/screen_shot_2.png
+.. image:: Screenshots/2.png
    :alt: Create
 
 Todo
